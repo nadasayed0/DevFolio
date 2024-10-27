@@ -1,0 +1,566 @@
+/*########## Global ##########*/
+*
+{
+    list-style-type: none;
+    text-decoration: none !important;
+}
+body 
+{
+    background-color: #F5F5F5;
+}
+:root
+{
+    --main-color:#0078FF;
+    --gradient-color:#0077ff9f;
+    --secondary-color: #fff;
+    --border-color:#CDE1F8;
+    --main-font-color:#1e1e1e;
+    --secondary-font-color:#4e4e4e;
+}
+@font-face 
+{
+    font-family: 'Roboto-700';
+    src: url(../font/Roboto-700.ttf);
+    font-weight: 700;
+}
+@font-face 
+{
+    font-family: 'Roboto-500';
+    src: url(../font/Roboto-500.ttf);
+    font-weight: 500;
+}
+@font-face 
+{
+    font-family: 'Roboto-400';
+    src: url(../font/Roboto-400.ttf);
+    font-weight: 400;
+}
+.main-title
+{
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    font-family: 'Roboto-500';
+    color: var(--main-font-color);
+}
+.main-title::after
+{
+    content: '';
+    width: 95px;
+    height: 3px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 110%;
+    left: 0;
+}
+.title
+{
+    text-align: center;
+    padding-block: 1.25rem 3.75rem;
+}
+.title h2 
+{
+    font-family: 'Roboto-700';
+    font-size: 3rem;
+    color: var(--main-font-color);
+    text-transform: uppercase;
+}
+.title p 
+{
+    font-family: 'Roboto-400';
+    color: var(--secondary-font-color);
+    position: relative;
+}
+.title p::after
+{
+    content: '';
+    width: 40px;
+    height: 5px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*############### navbar ###############*/
+.mynav .navbar-brand,
+header
+{
+    font-family: 'Roboto-700';
+    font-size: 1.75rem;
+    color: var(--secondary-color);
+}
+.mynav .navbar-brand:hover
+{
+    color: var(--secondary-color);
+}
+.mynav .navbar-nav a
+{
+    font-family: 'Roboto-500';
+    color: var(--secondary-color);
+    position: relative;
+}
+.mynav .navbar-nav a:not(.dropdown-toggle)::after 
+{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 100%;
+    left: 15%;
+    transition: all 0.4s;
+} 
+.mynav .navbar-nav a:not(.dropdown-toggle):hover::after,
+.mynav .navbar-nav a:not(.dropdown-toggle).active::after 
+{
+    width: 50px;
+}
+.mynav .active
+{
+    color: var(--secondary-color) !important;
+}
+.mynav .navbar-nav .dropdown::after 
+{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    transition: all 0.4s;
+} 
+.mynav .navbar-nav .dropdown:hover::after
+{
+    width: 90px;
+}
+.dropdown:hover > .dropdown-menu,
+.dropend:hover > .dropdown-menu 
+{
+    display: block;
+    margin-top: 0.125em;
+    margin-left: 0.125em;
+}
+.dropend:hover > .dropdown-menu 
+{
+    position: absolute;
+    top: 0;
+    left: 98%;
+}
+.mynav .navbar-nav .dropdown-menu a
+{
+    font-family: 'Roboto-500';
+    color: var(--secondary-font-color);
+    font-size: .875rem;
+    padding: .625rem 1.875rem;
+}
+.mynav .navbar-nav .dropdown .dropdown-menu a:hover 
+{
+    color: var(--main-color);
+    background-color: transparent;
+}
+.navbar-scrolled
+{
+    background-color: #000000e3;
+} 
+.navbar-clicked
+{
+    background-color: var(--secondary-color);
+}
+/*############### header ###############*/
+header 
+{
+    background-image: url(../images/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+header h1
+{
+    font-size: 4.5rem;
+}
+header span
+{
+    font-size: 2.5rem;
+}
+/*############### about section ###############*/
+main #about
+{
+    padding-block: 4.375rem;
+}
+main #about .container
+{
+    background-color: var(--secondary-color);
+    padding: 3.125rem;
+    box-shadow: 0 0 4px rgba(128, 128, 128, 0.685);
+}
+main #about .container li
+{
+    font-family: 'Roboto-400';
+    color: var(--secondary-font-color);
+}
+main #about .container .details li
+{
+    padding-bottom: .9375rem;
+}
+main #about .container .details span,
+main #about .container .about-progress h3
+{
+    font-family: 'Roboto-500';
+    font-size: 1.125rem;
+    color: var(--main-font-color);
+}
+main #about .container .about-progress h3
+{
+    margin-block: 1.25rem;
+}
+
+main #about .container .about-progress .progress
+{
+    height: 10px;
+}
+/*############ services section ############*/
+main #services .services-inner
+{
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 1.5625rem;
+    border-radius: 7px;
+    box-shadow: 0 2px 2px 2px rgba(128, 128, 128, 0.11);
+}
+main #services .services-inner i 
+{
+    font-size: 2.5rem;
+    border: .625rem solid var(--main-color);
+    border-radius: 50%;
+    padding: 1.5625rem;
+    transition: all 0.4s;
+}
+main #services .services-inner:hover i
+{
+    border-color: var(--border-color);
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+}
+main #services .services-inner h3
+{
+    font-family: 'Roboto-500';
+    font-size: 1.375rem;
+    color: var(--main-font-color);
+    text-transform: uppercase;
+    margin-block: .9375rem;
+}
+main #services .services-inner p
+{
+    font-family: 'Roboto-400';
+    color: var(--secondary-font-color);
+}
+/*############# counter section #############*/
+main #counter  
+{
+    background-image: linear-gradient(90deg, var(--gradient-color) 0% 100%), url(../images/counters-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-block: 5rem;
+    margin-block: 3.125rem;
+}
+main #counter .container
+{
+    text-align: center;
+    padding-block: 3.125rem;
+}
+main #counter .container .counter-inner i
+{
+    font-size: 2rem;
+    color: var(--secondary-color);
+    border: 10px solid var(--border-color);
+    border-radius: 50%;
+    padding: 1.25rem;
+}
+main #counter .container .counter-inner h3, 
+main #counter .container .counter-inner h4
+{
+    font-family: 'Roboto-400';
+    color: var(--secondary-color);
+    text-transform: uppercase;
+}
+main #counter .container .counter-inner h3
+{
+    font-size: 2rem;
+    margin-block: .625rem;
+}
+/*########### portfolio ###############*/
+main #portfolio .card
+{
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 4px rgba(128, 128, 128, 0.363);
+}
+main #portfolio .card .image
+{
+    overflow: hidden;
+}
+main #portfolio .card img 
+{
+    transition: all 1s;
+}
+main #portfolio .card:hover img 
+{
+    transform: scale(1.3);
+}
+main #portfolio .card .card-body h3 
+{
+    font-family: 'Roboto-500';
+    font-size: 1.1875rem;
+    color: var(--main-font-color);
+}
+main #portfolio .card .card-body h4
+{
+    font-family: 'Roboto-400';
+    font-size: .8125rem;
+    color: var(--secondary-font-color);
+}
+main #portfolio .card .card-body h4 span 
+{
+    color: var(--main-color);
+}
+main #portfolio .card .card-body i 
+{
+    font-size: 1.875rem;
+    font-weight: 400;
+    border: var(--main-color) .1875rem solid;
+    border-radius: 50%;
+    padding: .3125rem;
+    color: var(--main-color);
+}
+/*########### carousel ###########*/
+main #carousel
+{
+    background-image: linear-gradient(90deg, var(--gradient-color) 0% 100%), url(../images/overlay-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-block: 5rem;
+    margin-block: 3.125rem;
+}
+main #carousel .image
+{
+    width: fit-content;
+    margin: 1.5625rem auto;
+}
+main #carousel img 
+{
+    width: 150px;
+    border-radius: 50%;
+}
+main #carousel .item h3
+{
+    font-family: 'Roboto-500';
+    font-size: 1.375rem;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+}
+main #carousel .item p
+{
+    color: var(--secondary-color);
+}
+/*############ blog section ############*/
+main #blog
+{
+    padding-block: 1.875rem 6.25rem;
+}
+main #blog .card
+{
+    box-shadow: 0 2px 2px 2px rgba(128, 128, 128, 0.11);
+}
+main #blog .card .card-body span
+{
+    font-family: 'Roboto-400';
+    font-size: .6875rem;
+    padding: .625rem .9375rem;
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+}
+main #blog .card .card-body h3 a
+{
+    font-family: 'Roboto-500';
+    font-size: 1.3125rem;
+    color: #000;
+    display: inline-block;
+    margin-top: .9375rem;
+    transition: color 0.4s;
+}
+main #blog .card .card-body h3 a:hover 
+{
+    color: var(--main-color);
+}
+main #blog .card p,
+main #blog .card-footer .time span
+{
+    font-family: 'Roboto-400';
+}
+main #blog .card p,
+main #blog .card-footer .time
+{
+    color: var(--secondary-font-color);
+}
+main #blog .card-footer img
+{
+    width: 40px;
+    border-radius: 50%;
+}
+main #blog .card-footer .desc h3 a
+{
+    font-family: 'Roboto-400';
+    color: var(--main-font-color);
+    transition: color 0.5s;
+}
+main #blog .card-footer .desc h3 a:hover 
+{
+    color: var(--main-color);
+}
+/*############ contact ##########*/
+main #contact
+{
+    background-image: linear-gradient(90deg, var(--gradient-color) 0% 100%), url(../images/overlay-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-block: 6.25rem 3.125rem;
+}
+main #contact .container
+{
+    padding: 3.75rem;
+}
+main #contact .btn
+{
+    transition: all 0.3s;
+}
+main #contact .btn:hover 
+{
+    border: .375rem solid var(--border-color);
+}
+main #contact .contact-details li 
+{
+    font-family: 'Roboto-400';
+    color: var(--secondary-font-color);
+    padding-bottom: .9375rem;
+}
+main #contact .contact-details li i 
+{
+    color: var(--main-color);
+    padding-right: .625rem;
+}
+main #contact .icons li
+{
+    padding-right: .625rem;
+}
+main #contact .icons li a
+{
+    font-size: 1.1875rem;
+    color: #000;
+    border: .1875rem solid var(--main-color);
+    padding: .4375rem .625rem;
+    border-radius: 50%;
+    transition: all 0.4s; 
+}
+main #contact .icons li:hover a
+{
+    color: var(--secondary-color);
+    background-color: var(--main-color);
+    border-color: var(--border-color);
+}
+/*############# footer ##############*/
+footer
+{
+    background-color: #0062D3;
+}
+footer .container p 
+{
+    font-family: 'Roboto-400';
+    color: var(--secondary-color);
+    text-align: center;
+}
+footer .container p span
+{
+    font-family: 'Roboto-700';
+}
+footer .container a
+{
+    color: var(--secondary-color);
+}
+
+/*########### Media Query #############*/
+@media (max-width: 1400px)
+{
+    main #blog .card .card-body span 
+    {
+        top: -7%;
+    }
+}
+@media (max-width: 1200px)
+{
+    main #blog .card .card-body span 
+    {
+        top: -7%;
+    }
+}
+@media (max-width: 992px) 
+{
+    main #blog .card .card-body span 
+    {
+        top: -6%;
+    }
+    .mynav .navbar-nav a:not(.dropdown-toggle):hover::after,
+    .mynav .navbar-nav a:not(.dropdown-toggle).active::after 
+    {
+        width: 0;
+    }
+    .mynav .navbar-nav a:not(.dropdown-toggle):hover,
+    .mynav .navbar-nav a:not(.dropdown-toggle).active
+    {
+        color: #0062D3 !important;
+    }
+    .dropend:hover > .dropdown-menu 
+    {
+        position: static;
+    }
+    .navbar.navbar-clicked .nav-link,
+    .mynav.navbar-clicked .navbar-brand
+    {
+        color: #4e4e4e; 
+    }
+}
+@media (max-width: 768px) 
+{
+    main #blog .card .card-body span 
+    {
+        top: -8%;
+    }
+    main #contact .container
+    {
+        padding: 60px 20px;
+    }
+}
+@media screen and (max-width:575.98px) 
+{
+    main #about .container .details ul
+    {
+        padding-left: 0;
+        margin-block: 40px 10px;
+    }
+    
+    main #blog .card .card-body span 
+    {
+        top: -8;
+    }
+}
